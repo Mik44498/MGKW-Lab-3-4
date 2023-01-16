@@ -34,7 +34,7 @@ public class CourseController {
         return new ResponseEntity<>(courseService.save(userRequest).getId(), HttpStatus.CREATED);
     }
 
-    /*@DeleteMapping("/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCourse(@PathVariable("id") String id) {
         try {
             courseService.delete(id);
@@ -42,5 +42,5 @@ public class CourseController {
         } catch (EntityNotFound e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-    }*/
+    }
 }
